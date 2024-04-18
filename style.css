@@ -1,0 +1,211 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #1c222b;
+
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.bg-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 576px) {
+  .bg-layer {
+    background-size: 150%;
+  } 
+}
+
+.bg-layer-1 {
+  background-image: url(./images/bg_layer1.png);
+}
+
+.bg-layer-2 {
+  background-image: url(./images/bg_layer2.png);
+}
+
+.bg-layer-3 {
+  background-image: url(./images/bg_layer3.png);
+}
+
+header, footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+header h1, footer p {
+  color: rgba(255, 255, 255, .9);
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10vw;
+  text-align: center;
+  margin-left: 1.75rem;
+  mix-blend-mode: difference;
+  text-shadow: 0 0 4px black;
+}
+
+footer p {
+  font-size: 7vw;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: left;
+
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding: 20px;
+  margin-bottom: 2rem;
+}
+
+article:nth-child(2) {
+  align-items: end;
+  text-align: right;
+}
+
+article h2 {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 8vw;
+  color: white;
+  mix-blend-mode: difference;
+  margin-bottom: 2rem;
+}
+
+@keyframes bg-animation-1 {
+  0% {
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+    transform: translateX(0px) translateY(0px);
+  }
+  100% {
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+    transform: translateX(10px) translateY(-10px);
+  }
+}
+
+article p, article ul, .action-call p, .testimonial p, .events p {
+  max-width: 600px;
+  color: black;
+  font-weight: 500;
+  mix-blend-mode: hard-light;
+  font-size: 1.25rem;
+
+
+  padding: 30px 30px 30px 60px;
+  background-color: rgba(255, 255, 255, .2);
+  backdrop-filter: invert(80%) blur(3px);
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+
+  animation: 10s ease-in-out infinite alternate both bg-animation-1;
+}
+
+@keyframes bg-animation-2 {
+  0% {
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+    transform: translateX(0px) translateY(0px);
+  }
+  100% {
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+    transform: translateX(-10px) translateY(10px);
+  }
+}
+
+article:nth-child(2) p, article ul, 
+  .action-call p:nth-child(2), .testimonial p:nth-child(2), .events p:nth-child(2) {
+  padding: 30px 60px 30px 30px;
+  clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+  animation-name: bg-animation-2;
+}
+
+article ul {
+  list-style-type: none;
+}
+
+article ul li::before {
+  content: '♻️';
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+article ul li:nth-child(2)::before {
+  content: '🧹';
+}
+
+article ul li:nth-child(3)::before {
+  content: '🛁';
+}
+
+article ul li:nth-child(4)::before {
+  content: '🌳';
+}
+
+article ul li:nth-child(5)::before {
+  content: '📚';
+}
+
+.action-call, .testimonial, .events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.action-call h2, .testimonial h2, .events h2 {
+  color: rgba(255, 255, 255, .9);
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5vw;
+  text-align: center;
+  margin-left: 1.75rem;
+  mix-blend-mode: difference;
+}
+
+.action-call a {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+  transition: all .3s ease-in-out;
+}
+
+.action-call a:hover {
+  background-color: #ff8c7f;
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+
+.events a, .events a:visited {
+  font-weight: 500;
+  color: #b92888  ;
+}
+
+.events a:hover {
+  color: #5d1444;
+}
