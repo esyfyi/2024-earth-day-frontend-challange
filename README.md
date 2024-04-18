@@ -8,7 +8,10 @@ I pruerly used css and a little bit of js, I had to sacrifes a lot of readabilit
 I hope you like it as well!
 
 ## Demo
-<!-- Show us your project! You can directly embed an editor into this post (see the FAQ section from the challenge page) or you can share an image of your project and share a public link to the code. -->
+![Screenshot 1](./screenshots/screenshot-1.png)
+![Screenshot 2](./screenshots/screenshot-2.png)
+![Screenshot 3](./screenshots/screenshot-3.png)
+![Screenshot 4](./screenshots/screenshot-4.png)
 
 ## Journey
 
